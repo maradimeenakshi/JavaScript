@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>⏳ Countdown Timer</h1>
+
+    <div class="input-group">
+      <input type="number" id="hours" placeholder="HH" min="0">
+      <span>:</span>
+      <input type="number" id="minutes" placeholder="MM" min="0" max="59">
+      <span>:</span>
+      <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+    </div>
+
+    <div class="controls">
+      <button onclick="startCountdown()">Start</button>
+      <button onclick="pauseCountdown()">Pause</button>
+      <button onclick="resumeCountdown()">Resume</button>
+      <button onclick="resetCountdown()">Reset</button>
+    </div>
+
+    <div id="timer">00:00:00</div>
+
+    <label class="dark-mode-toggle">
+      <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+      Dark Mode
+    </label>
+
+    <audio id="alarmSound" src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" preload="auto"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
